@@ -1,15 +1,38 @@
 # POC-Spring-Boot
 
-Objetivo:
+### Technologies:
 
-Fluxo de POST
-Fluxo de GET
-Fluxo de PATCH
-Fluxo de DELETE
-Implementar paginação
-Fluxo usando Web
-Fluxo usando Reactive Web
-Comparar performance entre Web X Reactive Web
-Implementar JPA + Hibernate
-Implementar fluxo OAuth
-Implementar Unit Tests
+- Spring Boot
+- WSL2
+- Docker
+- PostgresSQL
+
+### POC Checklist:
+
+- [ ] POST route
+- [ ] GET route
+- [ ] PATCH route
+- [ ] DELETE route
+- [ ] Pagination
+- [ ] Flow using Web
+- [ ] Flow using Reactive Web
+- [ ] Performance comparison between Web and Reactive Web
+- [ ] Implement JPA + Hibernate
+- [ ] Implement OAuth
+- [ ] Implement Unit Tests
+- [ ] Feign Client
+
+### Useful commands
+
+```
+mvn clean install
+sdk list java
+sdk install java 18.0.1-zulu
+sdk use java 18.0.1-zulu
+sdk install maven
+```
+
+### Obtaining WSL2 address:
+```wsl hostname -I```
+ ip do postgres 172.18.0.1
+
