@@ -1,4 +1,4 @@
-package com.dequevedo.POCSpringBoot.model;
+package com.dequevedo.POCSpringBoot.model.domain;
 
 import com.dequevedo.POCSpringBoot.model.request.ProductRequest;
 import jakarta.persistence.*;
@@ -17,7 +17,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Entity
 @Table(name = "products")
-public class Product {
+public class ProductDomain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,8 +33,8 @@ public class Product {
     @Column(name = "internal_tag", columnDefinition = "VARCHAR(255)")
     private UUID internalTag;
 
-    public static Product valueOf(ProductRequest productRequest) {
-        return Product.builder()
+    public static ProductDomain valueOf(ProductRequest productRequest) {
+        return ProductDomain.builder()
                 .name(productRequest.getName())
                 .build();
     }

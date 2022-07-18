@@ -1,6 +1,6 @@
 package com.dequevedo.POCSpringBoot.model.response;
 
-import com.dequevedo.POCSpringBoot.model.Product;
+import com.dequevedo.POCSpringBoot.model.domain.ProductDomain;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,7 +16,7 @@ public class ProductResponse {
 
     private String name;
 
-    public static ProductResponse valueOf(Product domain) {
+    public static ProductResponse valueOf(ProductDomain domain) {
         return ProductResponse.builder()
                 .id(domain.getId())
                 .name(domain.getName())

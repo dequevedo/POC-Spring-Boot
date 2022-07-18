@@ -2,13 +2,15 @@
 #TODO traduzir pro ingles 
 
 POC em Spring Boot, utilizando Java 18.
+
 A aplicação estará hospedada no Heroku, 
 e utilizará um banco de dados PostgreSQL, 
 também provisionado pelo Heroku.
+
 Será utilizado SDK Man (colocar link) 
 para gerenciar as versões do java e Maven instaladas na máquina.
-A aplicação foi desenvolvida parcialmente em 
-ambiente Windows (Utilizando WSL2) e parcialmente no Ubuntu.
+
+A aplicação foi desenvolvida parcialmente no Ubuntu e parcialmente em ambiente Windows (Utilizando WSL2).
 
 ### Technologies:
 
@@ -30,9 +32,9 @@ ambiente Windows (Utilizando WSL2) e parcialmente no Ubuntu.
 - [ ] Flow using Web
 - [ ] Flow using Reactive Web
 - [ ] Performance comparison between Web and Reactive Web
-- [ ] Implement JPA + Hibernate
+- [x] Implement JPA + Hibernate
 - [ ] Implement OAuth
-- [ ] Implement Unit Tests
+- [x] Implement Unit Tests
 - [ ] Feign Client
 - [ ] Async call
 - [x] Exception Handlers

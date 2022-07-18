@@ -1,7 +1,7 @@
 package com.dequevedo.POCSpringBoot.service;
 
 import com.dequevedo.POCSpringBoot.exception.NotFoundException;
-import com.dequevedo.POCSpringBoot.model.Product;
+import com.dequevedo.POCSpringBoot.model.domain.ProductDomain;
 import com.dequevedo.POCSpringBoot.model.request.ProductRequest;
 import com.dequevedo.POCSpringBoot.model.response.ProductResponse;
 import com.dequevedo.POCSpringBoot.repository.ProductRepository;
@@ -20,9 +20,9 @@ public class ProductService {
     public ProductResponse createProduct(ProductRequest productRequest){
         log.info("Creating new product with name: {}", productRequest.getName());
 
-        Product product = productRepository.save(Product.valueOf(productRequest));
+        ProductDomain productDomain = productRepository.save(ProductDomain.valueOf(productRequest));
 
-        return ProductResponse.valueOf(product);
+        return ProductResponse.valueOf(productDomain);
     }
 
     public List<ProductResponse> getProducts(){
@@ -40,15 +40,15 @@ public class ProductService {
     public ProductResponse getProductById(String id){
         log.info("Getting Product with id: {}", id);
 
-        Product product = productRepository.findById(id)
+        ProductDomain productDomain = productRepository.findById(id)
                 .orElseThrow(() -> {
                     log.error("Product not found.");
                     throw new NotFoundException();
                 });
 
-        log.info("Product retrieved: {}", product);
+        log.info("Product retrieved: {}", productDomain);
 
-        return ProductResponse.valueOf(product);
+        return ProductResponse.valueOf(productDomain);
     }
 
 }

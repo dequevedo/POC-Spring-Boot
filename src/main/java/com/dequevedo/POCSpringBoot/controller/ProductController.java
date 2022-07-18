@@ -1,6 +1,5 @@
 package com.dequevedo.POCSpringBoot.controller;
 
-import com.dequevedo.POCSpringBoot.model.Product;
 import com.dequevedo.POCSpringBoot.model.request.ProductRequest;
 import com.dequevedo.POCSpringBoot.model.response.ProductResponse;
 import com.dequevedo.POCSpringBoot.service.ProductService;
