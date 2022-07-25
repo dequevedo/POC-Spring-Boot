@@ -29,19 +29,19 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
         return ResponseEntity.status(Integer.parseInt(exception.getMessage())).body(body);
     }
 
-    @Override
-    protected ResponseEntity<Object> handleMethodArgumentNotValid(
-            MethodArgumentNotValidException ex,
-            HttpHeaders headers,
-            HttpStatus status,
-            WebRequest request) {
-
-        Map<String, Object> body = new LinkedHashMap<>();
-        body.put("statusCode", HttpStatus.CONFLICT.value());
-        body.put("message", ex.getBindingResult().getAllErrors().get(0).getDefaultMessage());
-
-        return new ResponseEntity<>(body, status);
-    }
+//    @Override
+//    protected ResponseEntity<Object> handleMethodArgumentNotValid(
+//            MethodArgumentNotValidException ex,
+//            HttpHeaders headers,
+//            HttpStatus status,
+//            WebRequest request) {
+//
+//        Map<String, Object> body = new LinkedHashMap<>();
+//        body.put("statusCode", HttpStatus.CONFLICT.value());
+//        body.put("message", ex.getBindingResult().getAllErrors().get(0).getDefaultMessage());
+//
+//        return new ResponseEntity<>(body, status);
+//    }
 
 }
 
