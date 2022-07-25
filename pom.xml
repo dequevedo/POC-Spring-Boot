@@ -8,14 +8,16 @@
 		<version>3.0.0-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.dequevedo</groupId>
-	<artifactId>POCSpringBoot</artifactId>
+	<groupId>com.communityfarm</groupId>
+	<artifactId>communityfarm</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>POCSpringBoot</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Horta Comunitaria</name>
+	<description>Horta Comunitaria</description>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
