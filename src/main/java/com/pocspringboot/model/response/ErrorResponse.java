@@ -1,6 +1,6 @@
-package com.dequevedo.pocspringboot.model.response;
+package com.pocspringboot.model.response;
 
-import com.dequevedo.pocspringboot.configuration.MessageConfig;
+import com.pocspringboot.configuration.MessageConfig;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

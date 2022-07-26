@@ -1,12 +1,17 @@
-package com.dequevedo.pocspringboot.model.domain;
+package com.pocspringboot.model.domain;
 
-import com.dequevedo.pocspringboot.model.request.ProductRequest;
-import jakarta.persistence.*;
+import com.pocspringboot.model.request.ProductRequest;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import java.util.UUID;
 

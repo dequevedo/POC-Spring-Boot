@@ -1,4 +1,4 @@
-package com.dequevedo.pocspringboot.configuration;
+package com.pocspringboot.configuration;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.NoSuchMessageException;

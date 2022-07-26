@@ -1,6 +1,6 @@
-package com.dequevedo.pocspringboot.repository;
+package com.pocspringboot.repository;
 
-import com.dequevedo.pocspringboot.model.domain.ProductDomain;
+import com.pocspringboot.model.domain.ProductDomain;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface ProductRepository extends JpaRepository<ProductDomain, String> {
+public interface ProductRepository extends JpaRepository<ProductDomain, Long> {
     List<ProductDomain> findAll();
 
     ProductDomain save(ProductDomain productDomain);

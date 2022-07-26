@@ -1,6 +1,6 @@
-package com.dequevedo.pocspringboot.model.response;
+package com.pocspringboot.model.response;
 
-import com.dequevedo.pocspringboot.model.domain.ProductDomain;
+import com.pocspringboot.model.domain.ProductDomain;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

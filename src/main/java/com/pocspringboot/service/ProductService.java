@@ -1,10 +1,10 @@
-package com.dequevedo.pocspringboot.service;
+package com.pocspringboot.service;
 
-import com.dequevedo.pocspringboot.exception.NotFoundException;
-import com.dequevedo.pocspringboot.model.domain.ProductDomain;
-import com.dequevedo.pocspringboot.model.request.ProductRequest;
-import com.dequevedo.pocspringboot.model.response.ProductResponse;
-import com.dequevedo.pocspringboot.repository.ProductRepository;
+import com.pocspringboot.model.response.ProductResponse;
+import com.pocspringboot.exception.NotFoundException;
+import com.pocspringboot.model.domain.ProductDomain;
+import com.pocspringboot.model.request.ProductRequest;
+import com.pocspringboot.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ProductService {
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     public ProductResponse createProduct(ProductRequest productRequest){
         log.info("Creating new product with name: {}", productRequest.getName());
@@ -37,7 +37,7 @@ public class ProductService {
         return productsResponse;
     }
 
-    public ProductResponse getProductById(String id){
+    public ProductResponse getProductById(Long id){
         log.info("Getting Product with id: {}", id);
 
         ProductDomain productDomain = productRepository.findById(id)

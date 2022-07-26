@@ -1,8 +1,8 @@
-package com.dequevedo.pocspringboot.controller;
+package com.pocspringboot.controller;
 
-import com.dequevedo.pocspringboot.model.request.ProductRequest;
-import com.dequevedo.pocspringboot.model.response.ProductResponse;
-import com.dequevedo.pocspringboot.service.ProductService;
+import com.pocspringboot.model.request.ProductRequest;
+import com.pocspringboot.model.response.ProductResponse;
+import com.pocspringboot.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class ProductController {
-    private ProductService productService;
+    private final ProductService productService;
 
     @PostMapping("/products")
     @ResponseStatus(HttpStatus.CREATED)
@@ -34,7 +34,7 @@ public class ProductController {
 
     @GetMapping("/products/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public ProductResponse getProductById(@PathVariable String id) {
+    public ProductResponse getProductById(@PathVariable Long id) {
         return productService.getProductById(id);
     }
 }

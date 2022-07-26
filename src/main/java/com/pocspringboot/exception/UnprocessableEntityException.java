@@ -1,4 +1,4 @@
-package com.dequevedo.pocspringboot.exception;
+package com.pocspringboot.exception;
 
 public class UnprocessableEntityException extends RuntimeException {
 

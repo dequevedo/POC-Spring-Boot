@@ -1,4 +1,4 @@
-package com.dequevedo.pocspringboot.controller;//package com.dequevedo.POCSpringBoot.controller;
+package com.pocspringboot.controller;//package com.dequevedo.POCSpringBoot.controller;
 //
 //import com.dequevedo.POCSpringBoot.exception.NotFoundException;
 //import com.dequevedo.POCSpringBoot.exception.UnprocessableEntityException;
