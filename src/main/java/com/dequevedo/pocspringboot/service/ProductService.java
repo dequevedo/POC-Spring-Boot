@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ProductService {
-    private final ProductRepository productRepository;
+    private ProductRepository productRepository;
 
     public ProductResponse createProduct(ProductRequest productRequest){
         log.info("Creating new product with name: {}", productRequest.getName());
